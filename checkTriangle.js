@@ -17,6 +17,7 @@ clicked.addEventListener("click", () => {
         generalConditions () {
             if(this.side1 == "" || this.side2 == "" || this.side3 == "")  {
                 alert("don't forget to fill all boxes")
+
             } 
             else if (isNaN(this.side1, this.side2, this.side3)) {
                 alert("the lengths of the sides must be integer")
@@ -37,7 +38,8 @@ clicked.addEventListener("click", () => {
         }
 
         lengthControll = () => {
-            if (this.side1 + this.side2 === this.side3 || this.side1 + this.side3 === this.side2 || this.side3 + this.side2 === this.side1) { 
+            console.log(this.side1 !== 0)
+            if (this.side1 + this.side2 === this.side3 || this.side1 + this.side3 === this.side2 || this.side3 + this.side2 === this.side1) {            // boşken submitleyince hata veriyor.
                 output.innerHTML = "degenerate triangle"
                 output2.innerHTML = "It has zero area and looks like a single line !";
                 output2.style.color = "purple";
@@ -55,7 +57,7 @@ clicked.addEventListener("click", () => {
         } 
     }
 
-    const isTriangle = new triangleChecker(side1.value.trim(), side2.value.trim(), side3.value.trim());
+    const isTriangle = new triangleChecker(Number(side1.value.trim()), Number(side2.value.trim()), Number(side3.value.trim()));
     isTriangle.generalConditions();
     isTriangle.typeConditions();
     isTriangle.lengthControll();
