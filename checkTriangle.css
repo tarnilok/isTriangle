@@ -17,9 +17,10 @@ body {
 }
 
 button {
+    font-size: 1.5rem;
     background-color: brown;
     margin: 1rem;
-    padding: .3rem;
+    padding: .5rem;
     color: white;
     box-shadow: 0 .5px white ;
 }
@@ -34,9 +35,17 @@ button:active {
     transform: translateY(.5px);
 }
 
+input {
+    height: 1.5rem;
+    width: 15rem;
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
 h3 {
     margin-top: .5rem;
 }
 label {
-    margin-top: .5rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
 }
