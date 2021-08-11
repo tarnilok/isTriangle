@@ -29,7 +29,7 @@ class triangleChecker {
         if (this.side1 !== this.side2 & this.side1 !== this.side3 & this.side2 !== this.side3) { output.innerHTML = "scalene triangle"}
 
         else if (this.side1 === this.side2 || this.side1 === this.side3 || this.side2 === this.side3 ) {
-            output.innerHTML = "at least isosceles triangle"                 // ?????????
+            output.innerHTML = "at least isosceles triangle" 
             if (this.side1 === this.side2 & this.side1 === this.side3) {output.innerHTML = "equilateral triangle"} 
         }
         output.style.color = "blue"
