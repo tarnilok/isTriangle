@@ -10,6 +10,8 @@ class triangleChecker {
         this.side1 = side1,
         this.side2 = side2,
         this.side3 = side3 
+        output.style.display = ""
+        output2.style.display = ""
     }
     generalConditions () {
         if(this.side1 == "" || this.side2 == "" || this.side3 == "")  {
@@ -34,7 +36,11 @@ class triangleChecker {
     }
 
     lengthControll = () => {
-        if (this.side1 + this.side2 === this.side3 || this.side1 + this.side3 === this.side2 || this.side3 + this.side2 === this.side1) {            // boşken submitleyince hata veriyor.
+        if (this.side1 + this.side2 === this.side3 || this.side1 + this.side3 === this.side2 || this.side3 + this.side2 === this.side1) { 
+            if (this.side1 == 0 & this.side1 == 0 & this.side1 == 0) {
+                output.style.display = "none"
+                output2.style.display = "none"
+            }
             output.innerHTML = "degenerate triangle"
             output2.innerHTML = "It has zero area and looks like a single line !";
             output2.style.color = "purple";
@@ -44,7 +50,8 @@ class triangleChecker {
             output2.style.color = "green";  
         }
         else { 
-            output.style.visibility = "hidden";    //????????????
+            // output.style.visibility = "hidden";
+            output.style.display = "none" ;
             output2.innerHTML = "The length requirement not met. You can't draw a triangle with these lengths !";
             output2.style.color = "red";
         }
