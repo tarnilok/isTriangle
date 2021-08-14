@@ -59,14 +59,11 @@ class triangleChecker {
 }
 
 clicked.addEventListener("click", () => {
-
-
     const isTriangle = new triangleChecker(Number(side1.value.trim()), Number(side2.value.trim()), Number(side3.value.trim()));
     isTriangle.generalConditions();
     isTriangle.typeConditions();
     isTriangle.lengthControll();
 
     side1.value = "", side2.value = "", side3.value = "";
-
 })
 
