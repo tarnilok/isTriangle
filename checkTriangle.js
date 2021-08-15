@@ -36,6 +36,7 @@ class triangleChecker {
         output.style.color = "blue"
     }
 
+    
     lengthControll = () => {
         if (this.side1 + this.side2 === this.side3 || this.side1 + this.side3 === this.side2 || this.side3 + this.side2 === this.side1) { 
             if (this.side1 == 0 & this.side1 == 0 & this.side1 == 0) {
@@ -58,6 +59,8 @@ class triangleChecker {
         }
     } 
 }
+
+
 clicked.addEventListener("click", () => {
     const isTriangle = new triangleChecker(Number(side1.value.trim()), Number(side2.value.trim()), Number(side3.value.trim()));
     isTriangle.generalConditions();
