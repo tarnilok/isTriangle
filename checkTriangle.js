@@ -1,3 +1,4 @@
+
 const side1 = document.getElementById("input1");
 const side2 = document.getElementById("input2");
 const side3 = document.getElementById("input3");
@@ -57,7 +58,6 @@ class triangleChecker {
         }
     } 
 }
-
 clicked.addEventListener("click", () => {
     const isTriangle = new triangleChecker(Number(side1.value.trim()), Number(side2.value.trim()), Number(side3.value.trim()));
     isTriangle.generalConditions();
